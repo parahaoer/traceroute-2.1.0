@@ -8,7 +8,10 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            # program specifies the program you want to debug. Here it is set to the active file folder ${fileDirname} and active filename without an extension ${fileBasenameNoExtension}, 
+            # which if traceroute.c is the active file will be traceroute
+            "program": "${fileDirname}/${fileBasenameNoExtension}", 
+            # args 设置命令行参数
             "args": ["-I", "www.baidu.com"],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
